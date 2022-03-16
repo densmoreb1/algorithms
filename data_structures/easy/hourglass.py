@@ -1,3 +1,6 @@
+# https://www.hackerrank.com/challenges/2d-array/problem?isFullScreen=true
+# find the sum of an hourglass shape in the 2d array
+
 arr = [
 [-9, -9, -9, 1, 1, 1],
 [0,  -9,  0, 4, 3, 2],
