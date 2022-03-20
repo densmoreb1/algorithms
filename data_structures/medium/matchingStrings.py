@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/sparse-arrays/problem?isFullScreen=false
+# https://www.hackerrank.com/challenges/sparse-arrays/problem
 # given an array and a list of queries
 # return a count list of how many are found
 

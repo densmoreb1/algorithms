@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/arrays-ds/problem?isFullScreen=true
+# https://www.hackerrank.com/challenges/arrays-ds/problem
 # reverse an array
 
 def reverseArray(a):

@@ -1,4 +1,4 @@
-# https://www.hackerrank.com/challenges/2d-array/problem?isFullScreen=true
+# https://www.hackerrank.com/challenges/2d-array/problem
 # find the sum of an hourglass shape in the 2d array
 
 arr = [
