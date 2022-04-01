@@ -1,30 +1,16 @@
 # https://leetcode.com/problems/two-sum/
 
 # use a hash map tp keep track of index and value
-# or can use two pointers if its sorted
 
 def twoSum(nums, target):
-        n_dict = {}
-        
-        for i in range(len(nums)):
-            other_half = target - nums[i]
-            
-            if other_half in n_dict:
-                return [n_dict[other_half], i]
-            
-            n_dict[nums[i]] = i
-
-def two_sum_sorted(arr, target):
-    left, right = 0, len(arr) - 1
+    n_dict = {}
     
-    while left <= right:
+    for i in range(len(nums)):
+        # find the other number we are looking for
+        other_half = target - nums[i]
         
-        sum = arr[left] + arr[right]
+        # either return it or add it to the dict
+        if other_half in n_dict:
+            return [n_dict[other_half], i]
         
-        if sum == target:
-            return [left, right]
-        
-        if sum > target:
-            right -= 1
-        else:
-            left += 1
+        n_dict[nums[i]] = i
