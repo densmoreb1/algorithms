@@ -14,3 +14,19 @@ def twoSum(nums, target):
             return [n_dict[other_half], i]
         
         n_dict[nums[i]] = i
+
+def two_sum_sorted(arr, target: int):
+    
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+
+        sum = arr[left] + arr[right]
+        
+        if sum == target:
+            return [left, right]
+        
+        if sum > target:
+            right -= 1
+        else:
+            left += 1

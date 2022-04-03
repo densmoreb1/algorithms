@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/
+# https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 # use a dummy node to offset where the pointer is and use two pointers
 
@@ -6,7 +6,7 @@ def removeNthFromEnd(head, n: int):
         
     # two pointers
     
-    # use a dummy node to offset the left pointer
+    # create a dummy node to offset the left pointer
     dummy = ListNode(0, head)
     left = dummy
     right = head

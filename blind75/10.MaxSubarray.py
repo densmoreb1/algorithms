@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/maximum-subarray/submissions/
+# https://leetcode.com/problems/maximum-subarray/
 
 def maxSubArray(nums) -> int:
         

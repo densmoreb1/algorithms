@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/validate-binary-search-tree/submissions/
+# https://leetcode.com/problems/validate-binary-search-tree/
 
 # dfs and pass down infinty on either side
 

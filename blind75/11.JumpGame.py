@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/jump-game/submissions/
+# https://leetcode.com/problems/jump-game/
 
 def canJump(nums) -> bool:
 
