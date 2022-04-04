@@ -12,8 +12,8 @@ def twoSum(nums, target):
         # either return it or add it to the dict
         if other_half in n_dict:
             return [n_dict[other_half], i]
-        
-        n_dict[nums[i]] = i
+        else:
+            n_dict[nums[i]] = i
 
 def two_sum_sorted(arr, target: int):
     

@@ -10,12 +10,12 @@ def three_sum(nums):
     nums.sort()
     res = []
     
-    for i, a in enumerate(nums):
+    for i in range(len(nums)):
         
         if i > 0 and nums[i] == nums[i - 1]:
             continue
         
-        l, r = i+ 1, len(nums) - 1
+        l, r = i + 1, len(nums) - 1
         while l < r:
             three_sum = nums[i] + nums[l] + nums[r]
 
