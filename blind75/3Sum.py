@@ -26,6 +26,7 @@ def three_sum(nums):
             else:
                 res.append([nums[i], nums[l], nums[r]])
                 l += 1
+                # also check for duplicates
                 while nums[l] == nums[l - 1] and l < r:
                     l += 1
     
