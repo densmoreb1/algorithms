@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/number-of-islands/submissions/
+# https://leetcode.com/problems/number-of-islands/
 
 # use bfs to mark 1s as visted before increasing number of islands
 import collections

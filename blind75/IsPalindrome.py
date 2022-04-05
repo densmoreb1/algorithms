@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/valid-palindrome/
+
 def is_palindrome(s: str) -> bool:
     
     l, r = 0, len(s) - 1

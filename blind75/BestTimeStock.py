@@ -3,7 +3,7 @@
 # easier to understand with a picture
 
 def maxProfit(prices) -> int:
-        
+    
     left, right = 0, 1
     maxP = 0
     while right < len(prices):
