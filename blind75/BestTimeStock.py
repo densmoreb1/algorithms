@@ -8,7 +8,7 @@ def maxProfit(prices) -> int:
     maxP = 0
     while right < len(prices):
         
-        # if the price on the left is lower then save that profit
+        # if the price on the left is lower then save that profit and calculate it
         if prices[left] < prices[right]:
             profit = prices[right] - prices[left]
             maxP = max(profit, maxP)
