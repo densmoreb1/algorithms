@@ -12,3 +12,14 @@ def timeConversion(s):
         return('{:02}:{:02}:{:02}'.format(0, mm, ss))
     else:
         return('{:02}:{:02}:{:02}'.format(hh, mm, ss))
+
+def time2(s):
+    ap = s[-2:]
+    h, m, s = [int(x) for x in s[:8].split(':')]
+    
+    if ap == "PM":
+        return f"{h%12+12:02}:{m:02}:{s:02}"
+    else:
+        return f"{h%12:02}:{m:02}:{s:02}"
+
+print(time2('07:05:45PM'))

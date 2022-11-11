@@ -62,3 +62,38 @@ def first_occurrence(arr, target):
             r = mid - 1
             
     return bound
+
+#Q4
+def square_root(n):
+    if n == 0:
+        return 0
+    l, r = 0, n
+
+    bound = -1
+    while l <= r:
+        mid = (l + r) // 2
+
+        if mid * mid == n: # because it can be spot on
+            return mid
+        elif mid * mid > n:
+            bound = mid
+            r = mid - 1
+        else:
+            l = mid + 1
+
+    return bound - 1 # subtract one if it's bigger
+
+#Q5
+def find_min_rotated(arr):
+    l, r = 0, len(arr) - 1
+
+    bound = -1
+    while l <= r:
+        mid = (l + r) // 2
+
+        if arr[mid] <= arr[-1]:
+            bound = mid
+            r = mid - 1
+        else:
+            l = mid + 1
+    return bound
