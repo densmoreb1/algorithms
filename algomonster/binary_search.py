@@ -85,15 +85,23 @@ def square_root(n):
 
 #Q5
 def find_min_rotated(arr):
-    l, r = 0, len(arr) - 1
+    left, right = 0, len(arr) - 1
 
-    bound = -1
-    while l <= r:
-        mid = (l + r) // 2
+    bound = 0
+    while left <= right:
+        mid = (left+right) // 2
 
         if arr[mid] <= arr[-1]:
             bound = mid
-            r = mid - 1
+            right = mid - 1
         else:
-            l = mid + 1
+            left = mid + 1
+            
     return bound
+
+# Q6
+def peak_mountain(arr):
+    pass
+
+
+print(peak_mountain([0, 1, 2, 3, 2, 1, 0]))

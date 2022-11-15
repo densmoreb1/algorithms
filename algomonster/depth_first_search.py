@@ -29,3 +29,45 @@ def tree_max_depth(root: Node) -> int:
         return 0
 
 #Q2
+def visible_tree_node(root):
+    def dfs(node, m):
+        if node is None:
+            return 0
+
+        total = 0
+        if node.val >= m:
+            total += 1
+        
+        total += dfs(node.right, max(m, node.val))
+        total += dfs(node.left, max(m, node.val))
+
+        return total
+    
+    if root is None:
+        return 0
+    
+    return dfs(root, -float('inf'))
+
+# Q3
+def balanced(root):
+    def dfs(node):
+        if node is not None:
+            return 0
+
+        left_height = dfs(node.left)
+        right_height = dfs(node.right)
+
+        if left_height == -1 or right_height == -1:
+            return -1
+        
+        if abs(left_height - right_height) > 1:
+            return -1
+        
+        return max(left_height, right_height) + 1
+    
+    height = dfs(root)
+    if height == -1:
+        return False
+    else:
+        return True
+
