@@ -34,8 +34,6 @@ def level_order_traversal(root: Node):
         res.append(level)
     return res
 
-print(level_order_traversal(root))
-
 # Q2
 def zigzag(root: Node):
     q = deque([root])
@@ -58,4 +56,18 @@ def zigzag(root: Node):
         bool = not bool
     return res
 
-print(zigzag(root))
+# Q3
+def rightmost(root: Node):
+    res = []
+    q = deque([root])
+
+    while q:
+        n = len(q)
+        res.append(q[0].val)
+        for _ in range(n):
+            node = q.popleft()
+            for c in [node.left, node.right]:
+                if c:
+                    q.append(c)
+        
+    return res

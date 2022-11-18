@@ -2,7 +2,7 @@
 
 # use recursion and a memo
 
-def climbStairs(self, n: int) -> int:
+def climbStairs(n: int) -> int:
         
     def recursive(n, memo = {}):
         
