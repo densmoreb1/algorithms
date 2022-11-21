@@ -1,4 +1,5 @@
 from typing import List
+import time
 
 class Node:
     def __init__(self, val, children=None):
@@ -101,26 +102,48 @@ def partitioning(s):
     dfs([], 0)
     return res
 
-print(partitioning('aab'))
 
 # Q5
 def generate_parens(n):
-
     res = []
-    def dfs(start_index, path, open, closed):
-        if start_index == 2*n:
+
+    def dfs(start, path, open, closed):
+        if start == 2 * n:
             res.append(''.join(path))
             return
 
         if open < n:
             path.append('(')
-            dfs(start_index + 1, path, open + 1, closed)
+            dfs(start+1, path, open+1, closed)
             path.pop()
-
+        
         if closed < open:
             path.append(')')
-            dfs(start_index + 1, path, open, closed + 1)
+            dfs(start+1, path, open, closed+1)
             path.pop()
 
     dfs(0, [], 0, 0)
+    return res
+
+
+# Q6
+def generate_permutations(letters):
+    res = []
+    used = [False] * len(letters)
+
+    def dfs(length, path: List):
+        if length == len(letters):
+            res.append(''.join(path))
+            return
+        
+        for i, letter in enumerate(letters):
+            if used[i]:
+                continue
+            path.append(letter)
+            used[i] = True
+            dfs(length+1, path)
+            path.pop()
+            used[i] = False
+    
+    dfs(0, [])
     return res
