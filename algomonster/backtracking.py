@@ -102,6 +102,7 @@ def partitioning(s):
     dfs([], 0)
     return res
 
+print(partitioning('aab'))
 
 # Q5
 def generate_parens(n):
@@ -147,3 +148,46 @@ def generate_permutations(letters):
     
     dfs(0, [])
     return res
+
+
+# Q7
+def word_break(s: str, words: list):
+    memo = {}
+    def dfs(start):
+        if start == len(s):
+            return True
+        
+        if start in memo:
+            return memo[start]
+        
+        ans = False
+        for word in words:
+            if s[start:].startswith(word):
+                if dfs(start + len(word)):
+                    ans = True
+                    break
+        memo[start] = ans
+        return ans
+
+    return dfs(0)
+
+
+# Q8
+def decode_ways(digits: str):
+    memo = {}
+    def dfs(start: int):
+        if start == len(digits):
+            return 1
+        
+        ways = 0
+        if digits[start] == '0':
+            return ways
+        
+        ways += dfs(start + 1)
+        if 10 < int(digits[start: start+1]) <= 26:
+            ways += dfs(start + 2)
+        
+        memo[start] = ways
+        return ways
+    
+    return dfs(0)

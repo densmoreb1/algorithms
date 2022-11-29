@@ -71,3 +71,21 @@ def balanced(root):
     else:
         return True
 
+# Q4 
+def valid_binary_tree(root: Node):
+    
+    b = True
+    def dfs(node: Node, min_val, max_val):
+        if node is None:
+            return True
+        
+        if not (min_val < node.val < max_val):
+            return False
+        
+        return dfs(node.left, min_val, node.val) and dfs(node.right, node.val, max_val)
+    
+    return dfs(root, float('-inf'), float('inf'))
+
+root = build_tree(iter("6 4 3 x x 5 x x 8 x x".split()), int)
+
+print(valid_binary_tree(root))
