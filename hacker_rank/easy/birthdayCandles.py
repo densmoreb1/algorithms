@@ -10,4 +10,4 @@ def birthdayCakeCandles(candles):
     for i in candles:
         if i >= max:
             count += 1
-    return(count)
+    return (count)

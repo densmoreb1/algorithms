@@ -3,8 +3,8 @@
 
 
 def rotateLeft(rotations, arr):
-    rotations = rotations%len(arr)
-    arr = arr[rotations:]+arr[:rotations]
+    rotations = rotations % len(arr)
+    arr = arr[rotations:] + arr[:rotations]
 
     return arr
 

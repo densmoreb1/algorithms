@@ -4,6 +4,5 @@ def countingSort(arr):
 
     for index, value in enumerate(arr):
         res[value] += 1
-    
-    return res[:100]
 
+    return res[:100]

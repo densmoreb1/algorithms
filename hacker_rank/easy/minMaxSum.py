@@ -11,4 +11,4 @@ def miniMaxSum(arr):
             max = x
         if x < min:
             min = x
-    print(sum-max, sum-min)
+    print(sum - max, sum - min)

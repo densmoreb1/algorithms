@@ -7,7 +7,8 @@ def getPrefixScores(arr):
         op_list = list(map(lambda x: x + (to_add), prefix))
         print(prefix, op_list)
         new.append(sum(op_list))
-    
+
     print(new)
 
-getPrefixScores([1,2,1])
+
+getPrefixScores([1, 2, 1])

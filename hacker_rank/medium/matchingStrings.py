@@ -4,13 +4,13 @@
 
 def matchingStrings(strings, queries):
     count = []
-    
+
     for i in queries:
         count.append(strings.count(i))
     return count
 
 
 strings = ['aba', 'baba', 'aba', 'xzxb']
-queries = ['aba', 'xzxb','ab']
+queries = ['aba', 'xzxb', 'ab']
 
 print(matchingStrings(strings, queries))
