@@ -1,5 +1,5 @@
 from collections import deque
-from typing import List
+
 
 class Node:
     def __init__(self, val, left=None, right=None):
@@ -7,14 +7,18 @@ class Node:
         self.left = left
         self.right = right
 
+
 def build_tree(nodes, f):
     val = next(nodes)
-    if val == 'x': return None
+    if val == 'x':
+        return None
     left = build_tree(nodes, f)
     right = build_tree(nodes, f)
     return Node(f(val), left, right)
 
+
 root = build_tree(iter('1 2 4 x 7 x x 5 x x 3 x 6 x x'.split()), int)
+
 
 # Q1
 def level_order_traversal(root: Node):
@@ -33,6 +37,7 @@ def level_order_traversal(root: Node):
 
         res.append(level)
     return res
+
 
 # Q2
 def zigzag(root: Node):
@@ -56,6 +61,7 @@ def zigzag(root: Node):
         bool = not bool
     return res
 
+
 # Q3
 def rightmost(root: Node):
     res = []
@@ -69,5 +75,5 @@ def rightmost(root: Node):
             for c in [node.left, node.right]:
                 if c:
                     q.append(c)
-        
+
     return res
