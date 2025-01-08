@@ -16,11 +16,8 @@ def vanilla(sorted_list, target):
     return -1
 
 
-# Q1
-arr = [False, False, True, True, True]
-
-
 def find_boundary(arr):
+    # Q1
     l, r = 0, len(arr) - 1
 
     bound = -1
@@ -33,10 +30,12 @@ def find_boundary(arr):
             l = mid + 1
     return bound
 
-# Q2
+
+print(find_boundary([False, False, True, True, True]))
 
 
 def first_not_smaller(arr, target):
+    # Q2
     l, r = 0, len(arr) - 1
 
     bound = -1
@@ -49,10 +48,9 @@ def first_not_smaller(arr, target):
             l = mid + 1
     return bound
 
-# Q3
-
 
 def first_occurrence(arr, target):
+    # Q3
     l, r = 0, len(arr) - 1
 
     bound = -1
@@ -69,10 +67,9 @@ def first_occurrence(arr, target):
 
     return bound
 
-# Q4
-
 
 def square_root(n):
+    # Q4
     if n == 0:
         return 0
     l, r = 0, n
@@ -91,10 +88,9 @@ def square_root(n):
 
     return bound - 1  # subtract one if it's bigger
 
-# Q5
-
 
 def find_min_rotated(arr):
+    # Q5
     left, right = 0, len(arr) - 1
 
     bound = 0
@@ -108,12 +104,3 @@ def find_min_rotated(arr):
             left = mid + 1
 
     return bound
-
-# Q6
-
-
-def peak_mountain(arr):
-    pass
-
-
-print(peak_mountain([0, 1, 2, 3, 2, 1, 0]))
