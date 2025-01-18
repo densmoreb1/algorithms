@@ -1,5 +1,5 @@
 """
-Base Binary Search:
+Base Binary Search
 Problem statement:
     Given a sorted array of integers and an integer called target,
     find the element that equals the target and return its index.
