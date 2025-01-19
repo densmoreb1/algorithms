@@ -1,6 +1,14 @@
 """
-Binary Tree:
-    A tree that has no more than 2 child nodes
+When to use DFS:
+    Tree
+    Combinartorial problems
+        How many ways are there to arrange something
+        Find all possible combinations
+        Find all solutions to a puzzle
+    Graph problems
+        Find a path
+        Find connected nodes
+        Detect cycles
 """
 
 
@@ -34,6 +42,13 @@ def pre_order_traversal(root: Node):
         print(root.val)
         pre_order_traversal(root.left)
         pre_order_traversal(root.right)
+
+
+def post_order_traversal(root: Node):
+    if root is not None:
+        post_order_traversal(root.left)
+        post_order_traversal(root.right)
+        print(root.val)
 
 
 root = build_tree(iter('5 4 3 x x 8 x x 6 x x'.split()), int)

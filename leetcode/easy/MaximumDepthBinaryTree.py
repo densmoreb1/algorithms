@@ -26,6 +26,5 @@ def max_depth(root):
         return 0
 
 
-root = '3 9 20 x x 15 7'
 root = build_tree(iter('5 4 3 x x 8 x x 6 x x'.split()), int)
 print(max_depth(root))
