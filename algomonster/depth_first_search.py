@@ -51,7 +51,16 @@ def post_order_traversal(root: Node):
         print(root.val)
 
 
+def max_depth(root):
+    def dfs(node):
+        if node is not None:
+            left = dfs(node.left) + 1
+            right = dfs(node.right) + 1
+            return max(left, right)
+        return 0
+    return dfs(root)
+
+
 root = build_tree(iter('5 4 3 x x 8 x x 6 x x'.split()), int)
-in_order_traversal(root)
-print('-' * 75)
-pre_order_traversal(root)
+res = max_depth(root)
+print(res)

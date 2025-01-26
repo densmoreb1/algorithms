@@ -81,3 +81,26 @@ def first_not_smaller(arr, target):
 # arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # arr = [0]
 # print(first_not_smaller(arr, 0))
+
+
+def find_first_occurrenc(arr, target):
+    res = -1
+    left, right = 0, len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] == target:
+            res = mid
+            right = mid - 1
+        elif arr[mid] > target:
+            right = mid - 1
+        elif arr[mid] < target:
+            left = mid + 1
+
+    return res
+
+
+arr = [1, 3, 3, 3, 3, 6, 10, 10, 10, 100]
+target = 1
+print(find_first_occurrenc(arr, target))

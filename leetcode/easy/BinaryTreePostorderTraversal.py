@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/binary-tree-postorder-traversal/
+
 class Node:
     # Classic binary tree
     def __init__(self, val, left=None, right=None):
@@ -16,15 +18,16 @@ def build_tree(nodes, f):
     return Node(f(val), left, right)
 
 
-def max_depth(root):
-    if root is not None:
-        # print(root.val)
-        left = max_depth(root.left)
-        right = max_depth(root.right)
-        return max(left, right) + 1
-    else:
-        return -1
+def postorder(root):
+    def dfs(node, res):
+        if node is not None:
+            dfs(node.left, res)
+            dfs(node.right, res)
+            res.append(node.val)
+        return res
+
+    return dfs(root, [])
 
 
-root = build_tree(iter('5 4 3 x x 8 x x 6 x x'.split()), int)
-print(max_depth(root))
+root = build_tree(iter('1 2 3 4 5 x 8 x x 6 7 9'.split()), int)
+print(postorder(root))
