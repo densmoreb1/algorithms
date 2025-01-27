@@ -1,6 +1,6 @@
 """
 When to use DFS:
-    Tree
+    Tree problems
     Combinartorial problems
         How many ways are there to arrange something
         Find all possible combinations
@@ -9,6 +9,21 @@ When to use DFS:
         Find a path
         Find connected nodes
         Detect cycles
+
+Data structure:
+    Recursion
+
+Basic algorithm:
+    def dfs(root, target):
+        if root is None:
+            return None
+        if root.val == target:
+            return root
+        left = dfs(root.left, target)
+        if left is not None:
+            return left
+
+        return dfs(root.right, target)
 """
 
 
